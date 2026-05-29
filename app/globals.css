@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --azul: #1a2b8c;
+  --azul-claro: #2d44c8;
+  --negro: #0d0d0d;
+  --gris-oscuro: #1a1a1a;
+  --gris-claro: #888;
+  --blanco: #f5f5f5;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--negro);
+  color: var(--blanco);
+  font-family: 'Barlow', sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(-48%) translateX(40px); }
+  to   { opacity: 0.08; transform: translateY(-50%) translateX(0); }
+}
+
+.animate-fadeUp { animation: fadeUp 0.7s ease both; }
+.animate-fadeUp-1 { animation: fadeUp 0.7s 0.1s ease both; }
+.animate-fadeUp-2 { animation: fadeUp 0.7s 0.2s ease both; }
+.animate-fadeUp-3 { animation: fadeUp 0.7s 0.3s ease both; }
+.animate-floatIn { animation: floatIn 1s 0.4s ease both; }
